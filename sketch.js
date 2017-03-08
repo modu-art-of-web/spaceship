@@ -4,8 +4,8 @@ var G = 1;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  for (var i = 0; i < 100; i++) {
-    movers[i] = new Mover(random(1, 1), random(width), random(height));
+  for (var i = 0; i < 10; i++) {
+    movers[i] = new Mover(random(0, 3), random(width), random(height));
   }
 }
 
@@ -19,7 +19,7 @@ function draw() {
 
   var avg = sum / 128;
 
-  G = avg / 15;
+  G = avg / 10;
 
   for (var i = 0; i < movers.length; i++) {
     for (var j = 0; j < movers.length; j++) {
@@ -30,7 +30,7 @@ function draw() {
     }
 
     movers[i].update();
-    movers[i].checkEdges();
+    // movers[i].checkEdges();
     movers[i].display();
 
   }
@@ -40,7 +40,6 @@ function play(track){
   SC.resolve(track)
     .then(function(data){
       var streamUrl = data.stream_url + '?client_id=' + client_id;
-      console.log(streamUrl);
       audio.setAttribute('src', streamUrl);
       audio.play()
     }).catch(function(error){
@@ -68,4 +67,4 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 
-play('https://soundcloud.com/louisthechild/brokenrecord');
+play('https://soundcloud.com/keljet-tapes/tape-ten');

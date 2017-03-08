@@ -16,8 +16,8 @@ var Mover = function(m, x, y) {
   };
 
   this.display = function() {
-    stroke(0);
-    strokeWeight(2);
+    stroke(255);
+    // strokeWeight(1);
     fill(255, 127);
     ellipse(this.position.x, this.position.y, this.mass*16, this.mass*16);
   };
