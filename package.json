@@ -1,0 +1,29 @@
+{
+  "name": "spaceship",
+  "version": "1.0.0",
+  "description": "spaceship",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modu-art-of-web/pop-art.git"
+  },
+  "keywords": [
+    "sound"
+  ],
+  "author": "sona Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modu-art-of-web/pop-art/issues"
+  },
+  "homepage": "https://github.com/modu-art-of-web/pop-art#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "0.0.15",
+    "gulp-uglifyjs": "^0.6.2"
+  },
+  "dependencies": {}
+}
